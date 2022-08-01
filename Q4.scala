@@ -1,16 +1,15 @@
-object Q4 extends App{
-
-def function(args: Array[String]) = {
-    val input: Int = args(0).toInt
+object Q4{
+// Main Method
+// XX args: Array[String] -> access command line arguments
+// FOR JAVA - public void main(String args[])
+def main(args: Array[String]) = {
+    print("Enter an Integer: ")
+    val input:Int = scala.io.StdIn.readInt()
     input match {
-        case 1 if input == 0 => println("Negative/Zero is input")
-        case 2 if input % 2 == 0 => println("Even number is given")
-        case 3 if input % 2 != 0 => println("Odd number is given")
+        case x if x <= 0 => println("Negative/Zero is input")
+        case x if x % 2 == 0 => println("Even number is given")
+        case x if x % 2 != 0 => println("Odd number is given")
     }
 }
 }
 
-// Write a program in PatternMatching, takes the integer input from the command line. Based
-// on the input, write a code using match to print Negative/Zero is input when input is less than or
-// equal to 0.Print Even number is given when input is even, and print Odd number is given when
-// input is odd.
